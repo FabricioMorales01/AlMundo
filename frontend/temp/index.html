@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>AlMundo</title>		
+	<!-- vendorInject:css -->
+	<link rel="stylesheet" href="vendor/angular-material.css">
+	<!-- endinject -->
+
+    <!-- inject:css -->
+	<link rel="stylesheet" href="styles/al-mundo.min.css">
+	<!-- endinject -->
+	
+</head>
+<body ng-cloak ng-controller="mainController as vm">
+
+	<md-toolbar class="toolbar" ng-include="'src/view/toolbar.html'"></md-toolbar>
+
+	<div  class="main container" layout="column" layout-gt-xs="row">
+		<div class="sidebar" flex-gt-xs="30" ng-include="'src/view/sidebar.html'" ></div>
+		<div class="maincontent" flex ng-include="'src/view/main-content.html'">   
+		</div>		
+	</div>
+    <!-- vendorInject:js -->
+	<script src="vendor/angular.js"></script>
+	<script src="vendor/angular-animate.js"></script>
+	<script src="vendor/angular-aria.js"></script>
+	<script src="vendor/angular-messages.js"></script>
+	<script src="vendor/angular-material.js"></script>
+	<!-- endinject -->
+
+	<!-- inject:js -->
+	<script src="src/app.js"></script>
+	<script src="src/controller/mainController.js"></script>
+	<script src="src/directive/collapseDirective.js"></script>
+	<script src="src/directive/hotelDirective.js"></script>
+	<script src="src/directive/searchDirective.js"></script>
+	<script src="src/service/hotelService.js"></script>
+	<!-- endinject -->
+</body>
+</html>

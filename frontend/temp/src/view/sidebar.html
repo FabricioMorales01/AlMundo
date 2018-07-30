@@ -1,0 +1,12 @@
+ <div layout="row" layout-align="center start" ng-init="vm.isFilterCollapsed = true">
+    <div class="cont-filter">
+        <div class="xs-filter xs-filter" ng-click="vm.isFilterCollapsed = !vm.isFilterCollapsed">
+            <span class="xs-filter-text section-title">
+                Filtrar 
+                <span class="icon-row icon-row-down" ng-class="vm.isFilterCollapsed?'icon-row-down':'icon-row-up'" ></span>
+            </span>
+         </div>
+         <am-search hotels-list="vm.hotelsList" is-loading="vm.isLoading" ng-class="{'xs-filter-hide' : vm.isFilterCollapsed}"></am-search>   
+    </div>    
+   
+</div>
