@@ -1,6 +1,8 @@
 
 backend/node_modules/**
+frontend/node_modules/**
+frontend/bower_components/**
 backend/.tmp/**
 backend/.vs/**
-frontend/node_modules/**
-frontend/bowel_components/**
+
+
