@@ -1,0 +1,37 @@
+<div flex>
+    <form class="frmsearch" ng-submit="ctrl.search(true)">
+        <h3 class="frmsearch-title frmsearch-container" >Filtros</md-icon> </h3>
+
+        <div class="frmsearch-container" >                
+            <am-collapse title="'Nombre de hotel'" icon="'filters/search'">
+                <div layout="row">
+                    <div flex="70" class="text-left">
+                        <input class="input" ng-model="ctrl.filter.name" placeholder="Ingrese el nombre de hotel"></input>
+                    </div>
+                    <div flex="30" class="text-center">
+                        <button class="btn btn-primary" type="submit" >Aceptar</button>
+                    </div>
+                </div>               
+            </am-collapse>
+            
+        </div>
+        <div class="frmsearch-container">
+            <am-collapse title="'Estrellas'" icon="'filters/star'">
+                <md-radio-group ng-model="ctrl.filter.stars">
+                    <div class="frmsearch-star">                            
+                        <md-radio-button ng-value="0" >
+                                Todas las estrellas
+                        </md-radio-button>
+                    </div>
+                    <div ng-repeat="nStar in [] | range:1:5:true"   class="frmsearch-star">                        
+                        <md-radio-button ng-value="{{nStar}}" aria-label="{{nStar}}" >                            
+                            <span ng-repeat="n in [] | range:1:nStar ">
+                                <md-icon class="icon-star" md-svg-src="assets/icons/filters/star.svg" ></md-icon>
+                            </span>                            
+                        </md-radio-button>
+                    </div>
+                </md-radio-group>
+            </am-collapse>
+        </div>
+    </form>
+</div>
